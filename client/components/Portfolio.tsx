@@ -1,49 +1,52 @@
+const ASSET_BASE_URL = import.meta.env.VITE_ASSET_BASE_URL ?? '';
+const withBase = (path: string) => `${ASSET_BASE_URL}${path}`;
+
 const portfolioItems = [
   {
     id: 1,
-    image: 'http://localhost:3000/cdn/wedding.jpg',
+    image: withBase('/wedding.jpg'),
     title: 'Свадебное торжество',
     description: 'Световое и звуковое сопровождение торжества'
   },
   {
     id: 2,
-    image: 'http://localhost:3000/cdn/wedding2.jpg',
+    image: withBase('/wedding2.jpg'),
     title: 'Свадебное торжество',
     description: 'Свет, звук и LED экран для торжества '
   },
   {
     id: 3,
-    image: 'http://localhost:3000/cdn/askona1.jpg',
+    image: withBase('/askona1.jpg'),
     title: 'Конференция',
     description: 'Звуковое сопровождение. работа с экраном, работа с суфлёрами и удалённым спикером'
   },
   {
     id: 4,
-    image: 'http://localhost:3000/cdn/askona2.jpg',
+    image: withBase('/askona2.jpg'),
     title: 'Корпоративное мероприятие',
     description: 'Свет, звук и LED экран для мепроприятия'
   },
   {
     id: 5,
-    image: 'http://localhost:3000/cdn/port1.jpg',
+    image: withBase('/port1.jpg'),
     title: 'Концерт',
     description: 'Профессиональное световое сопровождение концерта'
   },
   {
     id: 5,
-    image: 'http://localhost:3000/cdn/koncert1.jpg',
+    image: withBase('/koncert1.jpg'),
     title: 'Праздничное мероприятие',
     description: 'Звуковое и световое сопровождение мероприятия'
   },
   {
     id: 5,
-    image: 'http://localhost:3000/cdn/koncert2.jpg',
+    image: withBase('/koncert2.jpg'),
     title: 'Корпоратив',
     description: 'Световое и звуковое сопровождение корпоратива'
   },
   {
     id: 5,
-    image: 'http://localhost:3000/cdn/koncert3.jpg',
+    image: withBase('/koncert3.jpg'),
     title: 'Конкурс',
     description: 'Световое сопровождение концерта красоты'
   },

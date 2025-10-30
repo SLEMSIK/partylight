@@ -1,5 +1,8 @@
 import { Product } from '@shared/types';
 
+const ASSET_BASE_URL = import.meta.env.VITE_ASSET_BASE_URL ?? '';
+const withBase = (path: string) => `${ASSET_BASE_URL}${path}`;
+
 export const PRODUCTS: Product[] = [
   // Light products (10 items)
   {
@@ -9,7 +12,7 @@ export const PRODUCTS: Product[] = [
     price: 1500,
     shortDescription: 'Вращающаяся голова заливающего света',
     longDescription: 'Голова',
-    images: ['..http://localhost:3000/cdn/wash_19x15.png'],
+    images: [withBase('/wash_19x15.png')],
     featured: true
   },
   {
@@ -19,7 +22,7 @@ export const PRODUCTS: Product[] = [
     price: 1500,
     shortDescription: 'Вращающаяся голова заливающего света, дополнительно кольцо',
     longDescription: 'Профессиональный движущийся прожектор с функциями spot и beam. Множество гобо, призмы, диммирование и стробос��оп. DMX-512 управление.',
-    images: ['..http://localhost:3000/cdn/wash_19x15_circle.png']
+    images: [withBase('/wash_19x15_circle.png')]
   },
   {
     id: 'beam10r',
@@ -28,7 +31,7 @@ export const PRODUCTS: Product[] = [
     price: 2000,
     shortDescription: 'Вращающаяся голова типа Beam (узкий луч)',
     longDescription: 'Яркий LED стробоскоп с регулировкой частоты вспышек. Отлично подходит для создания динамичных световых эффектов на танцполе.',
-    images: ['..http://localhost:3000/cdn/beam_10r.png']
+    images: [withBase('/beam_10r.png')]
   },
   {
     id: 'lbeam_circle',
@@ -37,7 +40,7 @@ export const PRODUCTS: Product[] = [
     price: 2000,
     shortDescription: 'Вращающаяся голова типа Beam (узкий луч), дополнительно кольцо',
     longDescription: 'Универсальная LED панель с 12 светодиодами по 10W каждый. RGBW смешение, DMX управление, встроенные программы.',
-    images: ['..http://localhost:3000/cdn/beam_circle.png']
+    images: [withBase('/beam_circle.png')]
   },
   {
     id: 'spot210',
@@ -46,7 +49,7 @@ export const PRODUCTS: Product[] = [
     price: 2000,
     shortDescription: 'Вращающаяся голова типа Spot (широкий луч)',
     longDescription: 'Профессиональный RGB лазерный проектор. Множество паттернов и эффектов, DMX и автоматический режимы работы.',
-    images: ['http://localhost:3000/cdn/spot_210.png']
+    images: [withBase('/spot_210.png')]
   },
   {
     id: 'par',
@@ -55,7 +58,7 @@ export const PRODUCTS: Product[] = [
     price: 1000,
     shortDescription: 'Прибор за заливики',
     longDescription: 'Профессиональный RGB лазерный проектор. Множество паттернов и эффектов, DMX и автоматический режимы работы.',
-    images: ['http://localhost:3000/cdn/ledpar.png']
+    images: [withBase('/ledpar.png')]
   },
   {
     id: 'sunstripe',
@@ -64,7 +67,7 @@ export const PRODUCTS: Product[] = [
     price: 1000,
     shortDescription: 'Sunstripe',
     longDescription: 'Профессиональный RGB лазерный проектор. Множество паттернов и эффектов, DMX и автоматический режимы работы.',
-    images: ['http://localhost:3000/cdn/sunstripe.png']
+    images: [withBase('/sunstripe.png')]
   },
   {
     id: 'portman',
@@ -73,7 +76,7 @@ export const PRODUCTS: Product[] = [
     price: 1000,
     shortDescription: 'Световой прибор в ретро-стиле',
     longDescription: 'Профессиональный RGB лазерный проектор. Множество паттернов и эффектов, DMX и автоматический режимы работы.',
-    images: ['http://localhost:3000/cdn/portman.png']
+    images: [withBase('/portman.png')]
   },
   {
     id: 'b_yey_740',
@@ -82,7 +85,7 @@ export const PRODUCTS: Product[] = [
     price: 1500,
     shortDescription: 'Вращающаяся светодиодная голова, 7 светодиодов по 40 Вт',
     longDescription: 'Профессиональный RGB лазерный проектор. Множество паттернов и эффектов, DMX и автоматический режимы работы.',
-    images: ['http://localhost:3000/cdn/b_yey_740.png']
+    images: [withBase('/b_yey_740.png')]
   },
   {
     id: 'b_yey_18x20',
@@ -91,7 +94,7 @@ export const PRODUCTS: Product[] = [
     price: 2000,
     shortDescription: 'Вращающаяся светодиодная голова, 18 светодиодов по 20 Вт',
     longDescription: 'Профессиональный RGB лазерный проектор. Множество паттернов и эффектов, DMX и автоматический режимы работы.',
-    images: ['http://localhost:3000/cdn/b_yey_k15.png']
+    images: [withBase('/b_yey_k15.png')]
   },
   {
     id: 'ledbar',
@@ -100,7 +103,7 @@ export const PRODUCTS: Product[] = [
     price: 1000,
     shortDescription: 'Линейный светильник заливающего типа',
     longDescription: 'Профессиональный RGB лазерный проектор. Множество паттернов и эффектов, DMX и автоматический режимы работы.',
-    images: ['http://localhost:3000/cdn/ledbar32.png']
+    images: [withBase('/ledbar32.png')]
   },
   {
     id: 'blinder',
@@ -109,7 +112,7 @@ export const PRODUCTS: Product[] = [
     price: 1000,
     shortDescription: '2-глазный светодиодный COB-светильник с холодным/теплым белым цветом',
     longDescription: 'Профессиональный RGB лазерный проектор. Множество паттернов и эффектов, DMX и автоматический режимы работы.',
-    images: ['http://localhost:3000/cdn/blinder.png']
+    images: [withBase('/blinder.png')]
   },
   {
     id: 'heiser',
@@ -118,7 +121,7 @@ export const PRODUCTS: Product[] = [
     price: 3000,
     shortDescription: 'Генератор тумана',
     longDescription: 'Профессиональный RGB лазерный проектор. Множество паттернов и эффектов, DMX и автоматический режимы работы.',
-    images: ['http://localhost:3000/cdn/heiser.png']
+    images: [withBase('/heiser.png')]
   },
 
   // Sound products (5 items)
@@ -129,7 +132,7 @@ export const PRODUCTS: Product[] = [
     price: 2500,
     shortDescription: 'Профессиональная активная колонка',
     longDescription: 'Мощная активная акустическая система 15" с встроенным усилителем 800W. Отличное качество звука для концертов и мероприятий.',
-    images: ['http://localhost:3000/cdn/EKX15p.png'],
+    images: [withBase('/EKX15p.png')],
     featured: true
   },
   {
@@ -139,7 +142,7 @@ export const PRODUCTS: Product[] = [
     price: 2500,
     shortDescription: 'Мощный активный сабвуфер',
     longDescription: 'Профессиональный сабвуфер 18" с усилителем 1200W. Глубокий и мощный бас для любых мероприятий.',
-    images: ['http://localhost:3000/cdn/EKX18sp.png']
+    images: [withBase('/EKX18sp.png')]
   },
   {
     id: 'Flow8',
@@ -148,7 +151,7 @@ export const PRODUCTS: Product[] = [
     price: 3000,
     shortDescription: 'Цифровой микшерный пульт на 8 каналов',
     longDescription: 'Профессиональный цифровой микшерный пульт на 16 каналов с DSP процессором, встроенными эффектами и USB записью.',
-    images: ['http://localhost:3000/cdn/flow8.png']
+    images: [withBase('/flow8.png')]
   },
   {
     id: 'Wing',
@@ -157,7 +160,7 @@ export const PRODUCTS: Product[] = [
     price: 5000,
     shortDescription: 'ифровой микшерный пульт на 32 канала',
     longDescription: 'Надежная UHF радиосистема с двумя ручными микрофонами. Стабильная работа, чистый звук без помех.',
-    images: ['http://localhost:3000/cdn/wing.png']
+    images: [withBase('/wing.png')]
   },
   {
     id: 'RadioMic',
@@ -166,7 +169,7 @@ export const PRODUCTS: Product[] = [
     price: 1000,
     shortDescription: 'Бееспроводная микрофонная система',
     longDescription: 'Современный DJ контроллер с 4 деками, джог-колесами, пэдами и встроенной звуковой картой. Совместим с популярными DJ программами.',
-    images: ['http://localhost:3000/cdn/radiomic.png']
+    images: [withBase('/radiomic.png')]
   },
   {
     id: 'analogPult',
@@ -175,7 +178,7 @@ export const PRODUCTS: Product[] = [
     price: 1500,
     shortDescription: 'Аналоговый пульт на 12 каналов',
     longDescription: 'Современный DJ контроллер с 4 деками, джог-колесами, пэдами и встроенной звуковой картой. Совместим с популярными DJ программами.',
-    images: ['http://localhost:3000/cdn/yamaxa.png']
+    images: [withBase('/yamaxa.png')]
   },
   {
     id: 'backline',
@@ -184,7 +187,7 @@ export const PRODUCTS: Product[] = [
     price: 25000,
     shortDescription: 'Барабаны, комбо усилители, микрофоны подозучки под любые инструменты',
     longDescription: 'Современный DJ контроллер с 4 деками, джог-колесами, пэдами и встроенной звуковой картой. Совместим с популярными DJ программами.',
-    images: ['http://localhost:3000/cdn/backline.png']
+    images: [withBase('/backline.png')]
   },
 
 
@@ -197,7 +200,7 @@ export const PRODUCTS: Product[] = [
     price: 5000,
     shortDescription: 'Профессиональный LED видео экран',
     longDescription: 'Модульный LED экран высокого разрешения P2.9 для внутренних мероприятий. Размер от 3x2 метров, яркость 1200 cd/m², возможность сборки любой конфигурации. Включает видео процессор, коммутацию и монтажные конструкции. Идеально подходит для концертов, конференций, презентаций и крупных мероприятий.',
-    images: ['http://localhost:3000/cdn/gloshine_segment.png'],
+    images: [withBase('/gloshine_segment.png')],
     featured: true
   },
   {
@@ -207,7 +210,7 @@ export const PRODUCTS: Product[] = [
     price: 6000,
     shortDescription: 'Профессиональный LED видео экран',
     longDescription: 'Модульный LED экран высокого разрешения P3.91 для внутренних мероприятий. Размер от 3x2 метров, яркость 1200 cd/m², возможность сборки любой конфигурации. Включает видео процессор, коммутацию и монтажные конструкции. Идеально подходит для концертов, конференций, презентаций и крупных мероприятий.',
-    images: ['http://localhost:3000/cdn/tv.png'],
+    images: [withBase('/tv.png')],
     featured: true
   },
   {
@@ -217,7 +220,7 @@ export const PRODUCTS: Product[] = [
     price: 8000,
     shortDescription: 'Профессиональный LED видео экран',
     longDescription: 'Модульный LED экран высокого разрешения P3.91 для внутренних мероприятий. Размер от 3x2 метров, яркость 1200 cd/m², возможность сборки любой конфигурации. Включает видео процессор, коммутацию и монтажные конструкции. Идеально подходит для концертов, конференций, презентаций и крупных мероприятий.',
-    images: ['http://localhost:3000/cdn/tv.png'],
+    images: [withBase('/tv.png')],
     featured: true
   },
 
@@ -229,7 +232,7 @@ export const PRODUCTS: Product[] = [
     price: 2000,
     shortDescription: 'Камера Lumix G7',
     longDescription: 'Полный комплект для организации онлайн-трансляций: камера Full HD, микшер ATEM Mini, микрофон, свет и ноутбук.',
-    images: ['http://localhost:3000/cdn/lumix_G7.png'],
+    images: [withBase('/lumix_G7.png')],
     featured: true
   },
   {
@@ -239,7 +242,7 @@ export const PRODUCTS: Product[] = [
     price: 2000,
     shortDescription: 'Камера Canon 77D',
     longDescription: 'Профессиональная PTZ камера с Full HD разрешением, 20x оптическим зумом и дистанционным управлением поворотом.',
-    images: ['http://localhost:3000/cdn/canon77d.png']
+    images: [withBase('/Canon77d.png')]
   },
   {
     id: 'canon600d',
@@ -248,7 +251,7 @@ export const PRODUCTS: Product[] = [
     price: 1500,
     shortDescription: 'Камера Canon 600D',
     longDescription: 'Профессиональная PTZ камера с Full HD разрешением, 20x оптическим зумом и дистанционным управлением поворотом.',
-    images: ['http://localhost:3000/cdn/canon600d.png']
+    images: [withBase('/Canon600d.png')]
   },
   {
     id: 'stab',
@@ -257,7 +260,7 @@ export const PRODUCTS: Product[] = [
     price: 2000,
     shortDescription: 'Система стибилизации камеры',
     longDescription: 'Компактный беспроводной петличный микрофон для интервью и презентаций. Чистый звук, надежная связь.',
-    images: ['http://localhost:3000/cdn/stab.png']
+    images: [withBase('/stab.png')]
   },
   {
     id: 'caster',
@@ -266,7 +269,7 @@ export const PRODUCTS: Product[] = [
     price: 2000,
     shortDescription: 'Микшерный пульт для эфира',
     longDescription: 'Регулируемая LED панель с диммером и настройкой температуры света. Идеальное освещение для стримов и видео.',
-    images: ['http://localhost:3000/cdn/caster.png']
+    images: [withBase('/caster.png')]
   },
   {
     id: 'ptz',
@@ -275,7 +278,7 @@ export const PRODUCTS: Product[] = [
     price: 1500,
     shortDescription: 'Камера с PTZ управлением',
     longDescription: 'Регулируемая LED панель с диммером и настройкой температуры света. Идеальное освещение для стримов и видео.',
-    images: ['http://localhost:3000/cdn/ptz.png']
+    images: [withBase('/ptz.png')]
   },
 
   // Kits products (5 items)
@@ -332,7 +335,7 @@ export const PRODUCTS: Product[] = [
     price: 25000,
     shortDescription: 'Сцена 5м*4м*3.5м',
     longDescription: 'Специальный свадебный комплект: звук для банкета и танцпола, романтичный свет, радиомикрофоны для ведущего.',
-    images: ['http://localhost:3000/cdn/scene.png']
+    images: [withBase('/scene.png')]
   },
   {
     id: 'totem',
@@ -341,7 +344,7 @@ export const PRODUCTS: Product[] = [
     price: 1000,
     shortDescription: 'Моно тотем высотой от 1 до 4х метров',
     longDescription: 'Специальный свадебный комплект: звук для банкета и танцпола, романтичный свет, радиомикрофоны для ведущего.',
-    images: ['http://localhost:3000/cdn/totem.png']
+    images: [withBase('/totem.png')]
   },
   {
     id: 'ferma',
@@ -350,7 +353,7 @@ export const PRODUCTS: Product[] = [
     price: 1000,
     shortDescription: 'Сценическая ферма длинной 2м',
     longDescription: 'Специальный свадебный комплект: звук для банкета и танцпола, романтичный свет, радиомикрофоны для ведущего.',
-    images: ['http://localhost:3000/cdn/ferma.png']
+    images: [withBase('/ferma.png')]
   },
 ];
 
