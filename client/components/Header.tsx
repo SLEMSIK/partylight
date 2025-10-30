@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
+import partyLogo from './images/partyLogo.png';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -62,12 +63,10 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-white/10">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <Link to="/" className="text-3xl lg:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent uppercase tracking-wider">
-            PartyLight
-          </Link>
+        <div className="relative flex items-center justify-between h-20 w-full">
+          
 
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden min-[1190px]:flex items-center gap-8 flex-1">
           <a
               href="#portfolio"
               onClick={handlePortfolioClick}
@@ -90,8 +89,11 @@ export function Header() {
               Оставить заявку
             </a>
           </nav>
+          <Link to="/" className="absolute left-1/2 -translate-x-1/2">
+            <img src={partyLogo} alt="PartyLight" className='origin-center scale-[0.8] lg:scale-[0.5]'/>
+          </Link>
+          <div className="hidden min-[1190px]:flex items-center gap-4 flex-1 justify-end">
 
-          <div className="hidden lg:flex items-center gap-4">
             <a
               href="#application"
               onClick={handleApplicationClick}
@@ -103,15 +105,15 @@ export function Header() {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden text-white p-2"
+            className="min-[1190px]:hidden text-white p-2"
           >
             <Menu className="w-6 h-6" />
           </button>
         </div>
 
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-white/10">
-            <nav className="flex flex-col gap-4">
+          <div className="min-[1190px]:hidden absolute right-4 top-20 z-50 bg-background/95 backdrop-blur-lg border border-white/10 rounded-xl p-4 shadow-xl w-64">
+            <nav className="flex flex-col gap-4 items-end">
               <a
                 href="#equipment"
                 onClick={handleEquipmentClick}
