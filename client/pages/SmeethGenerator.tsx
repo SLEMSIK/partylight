@@ -242,7 +242,7 @@ export default function SmeethGenerator() {
         comment: comment || undefined,
       };
 
-      const response = await fetch(withBase('/api/newSmeeth'), {
+      const response = await fetch(withBase('api/newSmeeth'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
