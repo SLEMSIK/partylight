@@ -17,7 +17,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Plus, Trash2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Seo from '@/components/Seo';
-
+const ASSET_BASE_URL = import.meta.env.VITE_ASSET_BASE_URL ?? '';
+const withBase = (path: string) => `${ASSET_BASE_URL}${path}`;
 const CATEGORY_OPTIONS: Array<{ value: 'sound' | 'light' | 'screens' | 'live-streams'; label: string }> = [
   { value: 'sound', label: 'Звук' },
   { value: 'light', label: 'Свет' },
@@ -241,7 +242,7 @@ export default function SmeethGenerator() {
         comment: comment || undefined,
       };
 
-      const response = await fetch('http://localhost:5001/api/newSmeeth', {
+      const response = await fetch(withBase('/api/newSmeeth'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
