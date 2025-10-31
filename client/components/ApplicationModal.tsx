@@ -48,7 +48,7 @@ export function ApplicationModal({ isOpen, onClose }: ApplicationModalProps) {
       const cartItems = localStorage.getItem('partylight_cart');
       const selectedProducts = cartItems ? JSON.parse(cartItems) : [];
 
-      const response = await fetch('/api/newApplication', {
+      const response = await fetch('https://cdn.partylight33.ru/api/newApplication', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
