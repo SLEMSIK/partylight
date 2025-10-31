@@ -10,3 +10,11 @@
 export interface DemoResponse {
   message: string;
 }
+
+/**
+ * Response type for /api/newSmeeth
+ */
+export interface SmeethResponse {
+  success: boolean;
+  message: string;
+}

@@ -25,6 +25,41 @@ export interface ApplicationResponse {
   message: string;
 }
 
+export interface SmeethItem {
+  category: 'sound' | 'light' | 'screens' | 'live-streams';
+  productId: string;
+  productName?: string; // Полное наименование продукта (заполняется при отправке)
+  unitPrice?: number; // Цена за одну штуку (заполняется при отправке)
+  quantity?: number;
+  total?: number; // Стоимость позиции (цена * количество)
+}
+
+export interface WorkItem {
+  type: 'mounting' | 'technician' | 'delivery';
+  label?: 'Монтажники' | 'Техники' | 'Доставка';
+  price: number; // Цена за одну штуку (unitPrice)
+  quantity: number;
+  total?: number; // Стоимость позиции (цена * количество)
+}
+
+export interface OtherItem {
+  name: string;
+  price: number; // Цена за одну штуку (unitPrice)
+  quantity: number;
+  total?: number; // Стоимость позиции (цена * количество)
+}
+
+export interface SmeethFormData {
+  items: SmeethItem[];
+  workItems?: WorkItem[];
+  otherItems?: OtherItem[];
+  subtotal: number; // Сумма без скидки и налога
+  discountPercent: number; // Скидка в процентах
+  taxPercent: number; // Налог в процентах (увеличивает сумму)
+  totalAmount: number; // Итоговая стоимость сметы с учетом скидки и налога
+  comment?: string;
+}
+
 export const CATEGORY_LABELS: Record<Category, string> = {
   'light': 'Свет',
   'sound': 'Звук',
