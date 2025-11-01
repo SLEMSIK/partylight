@@ -135,7 +135,7 @@ const navigate = useNavigate()
 
             <div className="space-y-4 mb-8">
               <a
-                href="https://t.me/densedoff"
+                href="https://t.me/PartyLight33_bot"
                 className="block w-full text-center py-4 px-6 border border-gray-300 text-gray-300 text-base lg:text-lg font-semibold rounded-xl hover:bg-white/10 transition-colors"
               >
                 Задать вопрос

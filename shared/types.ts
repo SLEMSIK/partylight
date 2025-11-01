@@ -9,6 +9,7 @@ export interface Product {
   longDescription: string;
   images: string[];
   featured?: boolean;
+  powerConsumption?: number; // Энергопотребление в ваттах (Вт)
 }
 
 export interface ApplicationFormData {

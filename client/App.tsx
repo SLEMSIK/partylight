@@ -14,6 +14,7 @@ import Category from "./pages/Category";
 import Product from "./pages/Product";
 import NotFound from "./pages/NotFound";
 import SmeethGenerator from "./pages/SmeethGenerator";
+import PowerCalculator from "./pages/PowerCalculator";
 import { useState, useEffect } from "react";
 
 const queryClient = new QueryClient();
@@ -49,6 +50,7 @@ const App = () => (
             <Route path="/category/:category" element={<Category />} />
             <Route path="/product/:id" element={<Product />} />
             <Route path="/smeeth-generator" element={<SmeethGenerator />} />
+            <Route path="/power-calculator" element={<PowerCalculator />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
