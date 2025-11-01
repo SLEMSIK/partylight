@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Instagram, Facebook } from 'lucide-react';
+import { Phone, Send, User, Users } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -76,16 +76,16 @@ export function Footer() {
             <h3 className="text-2xl lg:text-4xl font-medium text-white mb-3">Соцсети</h3>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://vk.com/pyl33"
                 className="w-12 h-12 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors"
               >
-                <Instagram className="w-6 h-6 text-gray-400" />
+                <Users className="w-6 h-6 text-gray-400" />
               </a>
               <a
-                href="#"
+                href="https://t.me/partylight33"
                 className="w-12 h-12 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors"
               >
-                <Facebook className="w-6 h-6 text-gray-400" />
+                <Send className="w-6 h-6 text-gray-400" />
               </a>
             </div>
           </div>
