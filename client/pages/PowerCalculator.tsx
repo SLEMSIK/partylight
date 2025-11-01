@@ -163,7 +163,7 @@ export default function PowerCalculator() {
       
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-white mb-2">Расчёт энергопотребления</h1>
+          <h1 className="text-2xl lg:text-4xl font-bold text-white mb-2">Расчёт энергопотребления</h1>
           <p className="text-gray-300">Выберите оборудование для расчёта энергопотребления и распределения нагрузки по фазам</p>
         </div>
 
